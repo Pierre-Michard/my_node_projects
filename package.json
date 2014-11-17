@@ -1,0 +1,13 @@
+{
+  "name": "flo-po",
+  "description": "an app for synchronizing flower power",
+  "version": "0.1.0",
+  "live-edit": true,
+  "dependencies": {
+    "express": "*",
+    "nedb": "^0.11.1",
+    "request": "*",
+    "requestify": "*",
+    "simple-oauth2": "~0.2"
+  }
+}
