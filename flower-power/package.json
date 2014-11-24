@@ -1,0 +1,58 @@
+{
+  "name": "flower-power",
+  "version": "0.0.1",
+  "description": "node.js lib for the Parrot Flower Power",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandeepmistry/node-flower-power.git"
+  },
+  "keywords": [
+    "Parrot",
+    "Flower",
+    "Power",
+    "Flower Power"
+  ],
+  "author": {
+    "name": "Sandeep Mistry",
+    "email": "sandeep.mistry@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandeepmistry/node-flower-power/issues"
+  },
+  "devDependencies": {
+    "jshint": "~2.3.0",
+    "async": "~0.2.9",
+    "bleno": "~0.0.3"
+  },
+  "dependencies": {
+    "noble": "~0.3.6"
+  },
+  "readme": "node-flower-power\n=================\n\nnode.js lib for the [Parrot Flower Power](http://www.parrot.com/flowerpower/usa/)\n\n\nInstall\n-------\n\nnpm install flower-power\n\nUsage\n-----\n\n    var FlowerPower = require('flower-power');\n\n__Discover__\n\n    FlowerPower.discover(callback(flowerPower));\n\n__Connect__\n\n    flowerPower.connect(callback);\n\n__Disconnect__\n\n    flowerPower.disconnect(callback);\n\n__Discover Services and Characteristics__\n\n    flowerPower.discoverServicesAndCharacteristics(callback);\n\n__Device Info__\n\n    flowerPower.readSystemId(callback(systemId));\n\n    flowerPower.readSerialNumber(callback(serialNumber));\n\n    flowerPower.readFirmwareRevision(callback(firmwareRevision));\n\n    flowerPower.readHardwareRevision(callback(hardwareRevision));\n\n__Other Info__\n\n    flowerPower.readFriendlyName(callback(friendlyName)); \n\n    flowerPower.writeFriendlyName(friendlyName, callback);\n\n\n    flowerPower.readColor(callback(color));\n\n__Battery Level__\n\n    // batteryLevel range is 0 - 100\n    flowerPower.readBatteryLevel(callback(batteryLevel));\n\n__Sunlight__\n\n    // sunlight units are photons per square meter \n    flowerPower.readSunlight(callback(sunlight));\n\n__Temperature__\n\n    flowerPower.readTemperature(callback(temperatureC, temperatureF));\n\n__Soil Moisture__\n\n    // soilMoisture units is percentage (%)\n    flowerPower.readSoilMoisture(callback(soilMoisture));\n\n__Live mode__\n\n    // sunlightChange, temperatureChange, soilMoistureChange events are emitted (see below)\n\n    flowerPower.enableLiveMode(callback);\n\n    flowerPower.disableLiveMode(callback);\n\nEvents \n------\n\n__Disconnect__\n\n    flowerPower.on('disconnect', callback);\n\n__Sunlight Change__\n\n    flowerPower.on('sunlightChange', callback(sunlight));\n\n__Temperature Change__\n\n    flowerPower.on('temperatureChange', callback(temperatureC, temperatureF));\n\n__Soil Moisture Change__\n\n    flowerPower.on('soilMoistureChange', callback(soilMoisture));\n\nTODO\n----\n\n  * ~~discover~~\n  * ~~connect~~\n  * ~~discover~~\n  * ~~discover services and characteristics~~\n  * ~~read device info~~\n    * ~~system id~~\n    * ~~serial number~~\n    * ~~firmware revision~~\n    * ~~hardware revision~~\n  * ~~read battery level~~\n  * ~~read sunlight~~\n  * ~~read temperature~~\n  * ~~read soil moisture~~\n  * ~~live mode~~\n    * ~~sunlight~~\n    * ~~temperature~~\n    * ~~soil moisture~~\n  * read fertilizer\n  * read historic data\n    * sunlight\n    * temperature\n    * soil moisture\n    * fertizler\n  * __use calculations to convert values__ (currently using lookup table)\n\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/sandeepmistry/node-flower-power",
+  "_id": "flower-power@0.0.1",
+  "dist": {
+    "shasum": "0d1daeab7e1efdab068b365156b321ea9e13d1db",
+    "tarball": "http://registry.npmjs.org/flower-power/-/flower-power-0.0.1.tgz"
+  },
+  "_from": "flower-power@",
+  "_npmVersion": "1.3.14",
+  "_npmUser": {
+    "name": "sandeepmistry",
+    "email": "sandeep.mistry@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "sandeepmistry",
+      "email": "sandeep.mistry@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "0d1daeab7e1efdab068b365156b321ea9e13d1db",
+  "_resolved": "https://registry.npmjs.org/flower-power/-/flower-power-0.0.1.tgz"
+}
